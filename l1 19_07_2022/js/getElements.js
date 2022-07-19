@@ -7,3 +7,6 @@ console.log("p1", p1);
 
 let pArr = document.querySelectorAll(".p1");
 console.log("all p1s", pArr);
+
+let byprop = document.querySelector("[href='index.html']");
+console.log(byprop);
