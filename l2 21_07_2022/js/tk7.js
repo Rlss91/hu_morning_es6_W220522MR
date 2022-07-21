@@ -8,6 +8,6 @@ for (let item of animalsArr) {
 
 const handleAddNewAnimal = () => {
   let newAnimalInput = document.querySelector("#newAnimalInput").value;
-  animalArr = [...animalsArr, newAnimalInput];
+  animalsArr = [...animalsArr, newAnimalInput];
   list.innerHTML += `<li>${newAnimalInput}</li>`;
 };
