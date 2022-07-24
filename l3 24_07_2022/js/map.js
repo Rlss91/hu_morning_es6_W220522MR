@@ -10,7 +10,6 @@ newArr = arr.map((item) => item + 5);
 // newArr = [6, 7, 8]
 
 //TK
-
 let tkArr = [1, 2, 3];
 let newTkArr = tkArr.map((item) => item);
 console.log(newTkArr);
