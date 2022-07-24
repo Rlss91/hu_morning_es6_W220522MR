@@ -14,4 +14,4 @@ const isEmail = (email) => {
   }
   return false;
 };
-isEmail("kenny@gmail.com");
+console.log(isEmail("kenny@gmail.com"));
