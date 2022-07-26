@@ -18,7 +18,7 @@ const isEmail = (email) => {
 const handleFilterEmailsClick = () => {
   let newEmailArr = [];
   let emailsList = document.querySelector("#emailsList");
-  emailsList.innerHTML = "";
+  emailsList.innerHTML = ""; // clear the list before each filter
   for (let item of emailsArr) {
     if (isEmail(item)) {
       //the email valid
