@@ -4,3 +4,9 @@ if (fullname.includes("kenny")) {
 } else {
   console.log("there is no kenny in fullname");
 }
+
+const handleTextInputChange = () => {
+  let txt = document.querySelector("p").innerText;
+  let txtInputValue = document.getElementById("textInput").value;
+  console.log(txt.includes(txtInputValue));
+};
