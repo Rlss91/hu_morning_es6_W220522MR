@@ -1,0 +1,19 @@
+.class2 {
+  background-color: yellow;
+  transition: all 3s;
+}
+.class3 {
+  background-color: black;
+  transition: all 3s;
+}
+
+.transitionForDiv {
+  transition: all 3s;
+  background-color: white;
+  opacity: 1;
+}
+
+.changeOpacity {
+  opacity: 0.5;
+  background-color: red;
+}

@@ -16,6 +16,14 @@ class User {
     }
     this.email = User.checkEmail(email);
     this.password = User.checkPassword(password);
+    if (
+      this.name == undefined ||
+      this.lname == undefined ||
+      this.email == undefined ||
+      this.password == undefined
+    ) {
+      this.name = this.lname = this.email = this.password = undefined;
+    }
   }
   static checkEmail(email) {
     //by sagi
@@ -51,4 +59,17 @@ const handleRegisterBtnClick = () => {
     document.querySelector("#passwordInput").value
   );
   console.log(user);
+  if (user.name) {
+    document.querySelector("#cardDisplayDiv").innerHTML += `
+    <div class="card">
+      <div class="card-header">
+        ${user.name} ${user.lname}
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">${user.lname}</h5>
+        <p class="card-text">${user.email}</p>
+      </div>
+    </div>
+    `;
+  }
 };
