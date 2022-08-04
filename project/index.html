@@ -67,7 +67,7 @@
           blanditiis veniam sunt, necessitatibus vitae? Quos illo neque porro
           maxime fugiat.
         </p>
-        <div class="carusela-wrapper d-none">
+        <div class="carusela-wrapper">
           <div class="carusela" id="caruselaDiv"></div>
           <div class="carusela-btns">
             <button class="btn btn-info" onclick="previousCarselaImage()">
@@ -78,11 +78,17 @@
             </button>
           </div>
         </div>
+        <div
+          class="row row-cols-1 row-cols-md-3 g-4"
+          id="cardsGridContainer"
+        ></div>
       </main>
       <footer>2022©️</footer>
     </div>
     <script src="./js/models/RealEstate.model.js"></script>
     <script src="./js/dataInitialization.js"></script>
+    <script src="./js/components/carusela.component.js"></script>
+    <script src="./js/components/cardsGridContainer.component.js"></script>
     <script src="./js/index.js"></script>
   </body>
 </html>
