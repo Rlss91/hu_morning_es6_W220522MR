@@ -17,3 +17,19 @@
     gap: 1rem;
   }
 }
+
+#listContainer {
+  .row {
+    .col {
+      img {
+        width: 40%;
+        border-radius: 25px;
+        // height: 100%;
+      }
+    }
+  }
+  .border-row {
+    border: solid #d0d3d6 0.1rem;
+    border-radius: 25px;
+  }
+}

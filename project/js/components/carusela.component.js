@@ -1,8 +1,9 @@
 let caruselaActivePhoto;
 
 const initializeCaruselaImages = () => {
+  let caruselaDiv = document.getElementById("caruselaDiv");
   for (let realEstateItem of realEstateArr) {
-    document.getElementById("caruselaDiv").innerHTML += `
+    caruselaDiv.innerHTML += `
     <img src="${realEstateItem.imgUrl}" class="d-none" alt="${realEstateItem.title}" id="carusela_img_${realEstateItem.id}">
     `;
   }

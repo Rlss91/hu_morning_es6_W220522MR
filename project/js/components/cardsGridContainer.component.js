@@ -1,6 +1,7 @@
 const initializeCardsGrid = () => {
+  let cardsGridContainer = document.getElementById("cardsGridContainer");
   for (let realEstateItem of realEstateArr) {
-    document.getElementById("cardsGridContainer").innerHTML += `
+    cardsGridContainer.innerHTML += `
         <div class="col">
             <div class="card">
             <img src="${realEstateItem.imgUrl}" class="card-img-top" alt="${realEstateItem.title}">

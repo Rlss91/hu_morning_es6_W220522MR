@@ -67,7 +67,20 @@
           blanditiis veniam sunt, necessitatibus vitae? Quos illo neque porro
           maxime fugiat.
         </p>
-        <div class="carusela-wrapper">
+        <div>
+          <!-- select display mode -->
+          <button class="btn btn-primary" onclick="handleSelectModeClick(1)">
+            <i class="bi bi-image-fill"></i>
+          </button>
+          <button class="btn btn-primary" onclick="handleSelectModeClick(2)">
+            <i class="bi bi-grid-3x3-gap-fill"></i>
+          </button>
+          <button class="btn btn-primary" onclick="handleSelectModeClick(3)">
+            <i class="bi bi-list"></i>
+          </button>
+        </div>
+        <div class="carusela-wrapper" id="caruselaContainer">
+          <!-- carusela -->
           <div class="carusela" id="caruselaDiv"></div>
           <div class="carusela-btns">
             <button class="btn btn-info" onclick="previousCarselaImage()">
@@ -79,9 +92,14 @@
           </div>
         </div>
         <div
-          class="row row-cols-1 row-cols-md-3 g-4"
+          class="row row-cols-1 row-cols-md-3 g-4 d-none"
           id="cardsGridContainer"
-        ></div>
+        >
+          <!-- cards grid -->
+        </div>
+        <div class="d-none" id="listContainer">
+          <!-- list -->
+        </div>
       </main>
       <footer>2022©️</footer>
     </div>
@@ -89,6 +107,7 @@
     <script src="./js/dataInitialization.js"></script>
     <script src="./js/components/carusela.component.js"></script>
     <script src="./js/components/cardsGridContainer.component.js"></script>
+    <script src="./js/components/listContainer.component.js"></script>
     <script src="./js/index.js"></script>
   </body>
 </html>
