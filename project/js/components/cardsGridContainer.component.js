@@ -1,5 +1,6 @@
 const initializeCardsGrid = () => {
   let cardsGridContainer = document.getElementById("cardsGridContainer");
+  cardsGridContainer.innerHTML = "";
   for (let realEstateItem of realEstateArr) {
     cardsGridContainer.innerHTML += `
         <div class="col">

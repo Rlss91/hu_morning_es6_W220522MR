@@ -18,3 +18,14 @@ const handleSelectModeClick = (selectModeNum) => {
   }
   document.getElementById(selectModeDisplayNow).classList.remove("d-none");
 };
+
+const handleSortClick = (sortDir) => {
+  if (sortDir == "⬇️") {
+    realEstateArr.sort((a, b) => a.price - b.price);
+  }
+  if (sortDir == "⬆️") {
+    realEstateArr.sort((a, b) => b.price - a.price);
+  }
+  initializeList();
+  initializeCardsGrid();
+};

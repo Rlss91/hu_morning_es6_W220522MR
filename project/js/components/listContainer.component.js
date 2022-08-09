@@ -1,5 +1,6 @@
 const initializeList = () => {
   let listContainer = document.getElementById("listContainer");
+  listContainer.innerHTML = "";
   for (let realEstateItem of realEstateArr) {
     listContainer.innerHTML += `
         <div class="row mt-1 border-row">
