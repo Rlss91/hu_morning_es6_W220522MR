@@ -29,3 +29,24 @@ const handleSortClick = (sortDir) => {
   initializeList();
   initializeCardsGrid();
 };
+
+const handleFilterByNameInput = (event) => {
+  let value = event.target.value;
+  /*
+  filter will create new array and remove items that we dont need,
+  so to prevent from filter to remove the unwanted items,
+  we created donotTouchRealEstateArr to store the RealEstates.
+  if we filter from realEstateArr directly 
+  the first filter will work, he will remove the unwanted items, but
+  on the secound filter the items already removed and it will filter
+  from the items that was saved from the previous filter.
+  */
+  realEstateArr = donotTouchRealEstateArr.filter((item) =>
+    item.title.includes(value)
+  );
+  //   realEstateArr = donotTouchRealEstateArr.filter((item) => {
+  //     return item.title.includes(value);
+  //   });
+  initializeList();
+  initializeCardsGrid();
+};

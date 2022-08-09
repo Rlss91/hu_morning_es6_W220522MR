@@ -67,23 +67,40 @@
           blanditiis veniam sunt, necessitatibus vitae? Quos illo neque porro
           maxime fugiat.
         </p>
-        <div>
+        <div class="row">
           <!-- select display mode -->
-          <button class="btn btn-primary" onclick="handleSelectModeClick(1)">
-            <i class="bi bi-image-fill"></i>
-          </button>
-          <button class="btn btn-primary" onclick="handleSelectModeClick(2)">
-            <i class="bi bi-grid-3x3-gap-fill"></i>
-          </button>
-          <button class="btn btn-primary" onclick="handleSelectModeClick(3)">
-            <i class="bi bi-list"></i>
-          </button>
-          <button class="btn btn-primary" onclick="handleSortClick('⬇️')">
-            <i class="bi bi-sort-numeric-down"></i>
-          </button>
-          <button class="btn btn-primary" onclick="handleSortClick('⬆️')">
-            <i class="bi bi-sort-numeric-up"></i>
-          </button>
+          <div class="col-3">
+            <button class="btn btn-primary" onclick="handleSelectModeClick(1)">
+              <i class="bi bi-image-fill"></i>
+            </button>
+            <button class="btn btn-primary" onclick="handleSelectModeClick(2)">
+              <i class="bi bi-grid-3x3-gap-fill"></i>
+            </button>
+            <button class="btn btn-primary" onclick="handleSelectModeClick(3)">
+              <i class="bi bi-list"></i>
+            </button>
+            <button class="btn btn-primary" onclick="handleSortClick('⬇️')">
+              <i class="bi bi-sort-numeric-down"></i>
+            </button>
+            <button class="btn btn-primary" onclick="handleSortClick('⬆️')">
+              <i class="bi bi-sort-numeric-up"></i>
+            </button>
+          </div>
+          <div class="col">
+            <div class="input-group mb-3">
+              <span class="input-group-text" id="basic-addon1"
+                ><i class="bi bi-search"></i
+              ></span>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="RealEstate name"
+                aria-label="RealEstate name"
+                aria-describedby="basic-addon1"
+                oninput="handleFilterByNameInput(event)"
+              />
+            </div>
+          </div>
         </div>
         <div class="carusela-wrapper" id="caruselaContainer">
           <!-- carusela -->
@@ -109,6 +126,7 @@
       </main>
       <footer>2022©️</footer>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.js"></script>
     <script src="./js/models/RealEstate.model.js"></script>
     <script src="./js/dataInitialization.js"></script>
     <script src="./js/components/carusela.component.js"></script>

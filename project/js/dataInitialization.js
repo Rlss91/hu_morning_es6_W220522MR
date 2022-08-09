@@ -23,3 +23,5 @@ let realEstateArr = [
     3
   ),
 ];
+
+const donotTouchRealEstateArr = _.cloneDeep(realEstateArr);
