@@ -7,7 +7,9 @@ const initializeCaruselaImages = () => {
     <img src="${realEstateItem.imgUrl}" class="d-none" alt="${realEstateItem.title}" id="carusela_img_${realEstateItem.id}">
     `;
   }
-  document.getElementById("carusela_img_1").classList.remove("d-none"); //show the first image
+  if (document.getElementById("carusela_img_1")) {
+    document.getElementById("carusela_img_1").classList.remove("d-none"); //show the first image
+  }
   caruselaActivePhoto = 1; //save in memory that we show the first image
 };
 initializeCaruselaImages();
