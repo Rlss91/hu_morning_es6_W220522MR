@@ -20,7 +20,9 @@
 
 #listContainer {
   .row {
-    .col {
+    .col,
+    .col-3,
+    .col-1 {
       img {
         width: 40%;
         border-radius: 25px;

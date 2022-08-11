@@ -15,7 +15,9 @@
   gap: 1rem;
 }
 
-#listContainer .row .col img {
+#listContainer .row .col img,
+#listContainer .row .col-3 img,
+#listContainer .row .col-1 img {
   width: 40%;
   border-radius: 25px;
 }

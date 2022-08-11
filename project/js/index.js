@@ -68,3 +68,24 @@ const initPageLoad = () => {
 };
 
 initPageLoad();
+
+const handleSaveEditClick = () => {
+  let realestateInput = document.getElementById("realestateInput").value;
+  let urlInput = document.getElementById("urlInput").value;
+  let priceInput = document.getElementById("priceInput").value;
+  let realestateItem = donotTouchRealEstateArr.find(
+    (item) => item.id === selectedIdToEditRealestate
+  );
+  if (realestateItem) {
+    realestateItem.title = realestateInput;
+    realestateItem.price = +priceInput;
+    realestateItem.imgUrl = urlInput;
+    console.log("donotTouchRealEstateArr", donotTouchRealEstateArr);
+    localStorage.setItem(
+      "realEstateArr",
+      JSON.stringify(donotTouchRealEstateArr)
+    ); //store as json in localstorage the changes
+    initRealestateArrays(); //get the array from the storgae
+    initPageLoad(); //recreate the html so we can see the changes
+  }
+};
