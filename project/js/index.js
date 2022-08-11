@@ -6,14 +6,17 @@ const handleSelectModeClick = (selectModeNum) => {
     case 1:
       //   document.getElementById("caruselaContainer").classList.remove("d-none");
       selectModeDisplayNow = "caruselaContainer";
+      localStorage.setItem("selectMode", "1");
       break;
     case 2:
       //   document.getElementById("cardsGridContainer").classList.remove("d-none");
       selectModeDisplayNow = "cardsGridContainer";
+      localStorage.setItem("selectMode", "2");
       break;
     case 3:
       //   document.getElementById("listContainer").classList.remove("d-none");
       selectModeDisplayNow = "listContainer";
+      localStorage.setItem("selectMode", "3");
       break;
   }
   document.getElementById(selectModeDisplayNow).classList.remove("d-none");
@@ -22,9 +25,11 @@ const handleSelectModeClick = (selectModeNum) => {
 const handleSortClick = (sortDir) => {
   if (sortDir == "⬇️") {
     realEstateArr.sort((a, b) => a.price - b.price);
+    localStorage.setItem("sortDir", "⬇️");
   }
   if (sortDir == "⬆️") {
     realEstateArr.sort((a, b) => b.price - a.price);
+    localStorage.setItem("sortDir", "⬆️");
   }
   initializeList();
   initializeCardsGrid();
@@ -50,3 +55,16 @@ const handleFilterByNameInput = (event) => {
   initializeList();
   initializeCardsGrid();
 };
+
+const initPageLoad = () => {
+  let selectModeFromls = localStorage.getItem("selectMode");
+  if (selectModeFromls) {
+    handleSelectModeClick(+selectModeFromls);
+  }
+  let sortDirFromls = localStorage.getItem("sortDir");
+  if (sortDirFromls) {
+    handleSortClick(sortDirFromls);
+  }
+};
+
+initPageLoad();
